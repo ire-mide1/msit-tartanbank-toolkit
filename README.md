@@ -1,22 +1,23 @@
 # TartanBank Nightly Toolkit
 
 ## Quiz Result
-My quiz result screenshot is included as `quiz_result.png`. This shows all my 4 answers correctly
+My quiz result screenshot is added as `quiz_result.png`. This shows my 4 answers correctly
 (10 total transactions, 5 deposits, 5 withdrawals, 3 distinct accounts). It was verified against
 my Andrew ID.
 
 ## Bash vs Python: Why Each Tool Was Used
 I used Bash and Python in this project.
-Bash handles the file plumbing. `setup.sh` creates the folder structure and checks that
+Bash handles the file plumbing. `setup.sh` creates the folder structure and checks that 
 the transactions file exists, `secure_creds.sh` hashes the operator passphrase (for security), and
 `run.sh` ties the whole nightly job together. Python is called to read the report
-back to print a short summary. Bash is a good fit because it is built to automate files, folders, and other command-line tools like `sha256sum`, `grep`, and `wc`.
+back to print a short summary. Bash is a good fit because it is built to automate files, folders, 
+and other command-line tools like `sha256sum`, `grep`, and `wc`.
 
 Python, on the other hand, handles the business logic. The `Account` and `Ledger`
 classes in `bank.py` model how transactions are applied to individual accounts while
-`process.py` reads the CSV, applies each transaction, and writes the report. Python is
-the better choice here because object-oriented classes make it easy to keep each
-account's balance and transaction count self-contained, while the Ledger coordinates
+`process.py` reads the CSV, applies each transaction, and writes the report.
+I used Python because object-oriented classes make it easy to keep each
+account's balance and transaction count private, while the Ledger coordinates
 across all of them. This is not easy to achieve with Bash.
 
 ## The Hardest Part
