@@ -28,12 +28,7 @@ accidentally created a nested duplicate project folder early on. I fixed both by
 carefully checking file contents with `cat` before running anything, and by using
 `mv` to consolidate my folder structure back into one clean directory.
 
-## How to Run This Toolkit From a Fresh Clone
-
-## The Hardest Part
-The hardest part for me was setting up the WSL/Ubuntu environment and getting used to the fact that scripts must actually be saved in the editor before running them in the terminal — I ran into an issue where `setup.sh` and `secure_creds.sh` appeared to save but were actually empty, because I hadn't saved the file in VS Code first. I also accidentally created a nested duplicate project folder early on. I fixed both by carefully checking file contents with `cat` before running anything, and by using `mv` to consolidate my folder structure back into one clean directory.
-
-## How to Run This Toolkit From a Fresh Clone
+## How to Run This Toolkit 
 
 1. Clone the repository:
 ```
